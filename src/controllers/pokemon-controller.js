@@ -17,7 +17,7 @@ import {
   getPokemonEvolvesFrom,
   getPokemonEvolvesTo,
 } from "../models/pokemon";
-import { AppError } from "../../errors/app-error";
+import { AppError } from "../errors/app-error";
 import {
   isNumberValid,
   isNameValid,
@@ -154,7 +154,7 @@ class PokemonController {
     return { statusCode: 200, responseObject };
   }
 
-  async getPokemonBackup(query) {
+  async getPokemon(query) {
     const responseObject = {
       number: null,
       name: null,
@@ -262,7 +262,7 @@ class PokemonController {
     return { statusCode: 200, responseObject };
   }
 
-  async getPokemon(query) {
+  async getPokemonWilliam(query) {
     const responseObject = {
       number: null,
       name: null,

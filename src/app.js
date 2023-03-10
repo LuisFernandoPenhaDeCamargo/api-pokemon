@@ -1,7 +1,7 @@
 import express from "express";
 import "express-async-errors";
 import routes from "./routes";
-import { AppError } from "../errors/app-error";
+import { AppError } from "./errors/app-error";
 
 class App {
   constructor() {
