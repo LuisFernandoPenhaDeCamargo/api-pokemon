@@ -1,6 +1,6 @@
 FROM node:18-alpine AS build
 WORKDIR /opt/api/
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install -g npm@8.19.2
 RUN npm install
 COPY . .
@@ -12,3 +12,5 @@ COPY --from=build /opt/api/dist ./dist
 COPY --from=build /opt/api/node_modules ./node_modules
 COPY --from=build /opt/api/package.json .
 COPY --from=build /opt/api/.env .
+
+CMD ["yarn", "start"]
